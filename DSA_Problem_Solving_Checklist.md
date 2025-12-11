@@ -123,7 +123,7 @@ Besides swaps and comparisons, check:
 
 ---
 
-## 6. TL;DR – Quick Reference
+## 6. Quick Reference
 
 - **Check:** traversals, recursion depth, memory usage, insert/delete cost, access pattern, data structure overhead  
 - **Time Complexity depends on:** input size/order, operation type, data structure, algorithm strategy, memory access  
