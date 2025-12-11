@@ -51,15 +51,15 @@ else:
 
 - **How it works:** Convert the array into a hash map or hash set.  
 - **Search Time:** Average O(1) (constant time)  
-- **Worst Case:** O(n), but rare with good hashing  
+- **Worst Case:** O(n), but rare with good hashing
 - **Good for:** Fast repeated searches
 Python Example:
 ```python
 arr = [4, 2, 7, 1, 9]
-hash_set = set(arr)  # Create a hash set
+hash_set = set(arr)  # Create a hash set            Time Complexity: [ O(n) -> Avg. case, O(n^2) -> Hashing collisions ]
 
 target = 7
-if target in hash_set:
+if target in hash_set:                              Time Complexity: O(1)
     print("Found!")  # Output: Found!
 else:
     print("Not found")
@@ -80,6 +80,18 @@ if target in index_map:
 else:
     print("Not found")
 ```
+index_map = {
+    4: 0,
+    2: 1,
+    7: 2,
+    1: 3,
+    9: 4
+}
+| Operation                 | What it does             | Time  |
+|--------------------------|---------------------------|-------|
+| Create index_map         | Convert list → dict       | O(n)  |
+| Check target in index_map| See if number exists      | O(1)  |
+| index_map[target]        | Get index quickly         | O(1)  |
 
 ## 3. Use Special Data Structures
 
