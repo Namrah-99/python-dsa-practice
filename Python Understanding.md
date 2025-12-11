@@ -138,3 +138,63 @@ Time Complexity: `O(n)`
 
 ---
 
+# Convert list → dict
+```python
+index_map = {value: i for i, value in enumerate(arr)}
+```
+
+It creates a dictionary where:
+- each element of the list becomes a key
+- its index in the list becomes the value
+
+So the list:
+```python
+arr = [4, 2, 7, 1, 9]
+```
+
+becomes the dictionary:
+```python
+index_map = {
+    4: 0,
+    2: 1,
+    7: 2,
+    1: 3,
+    9: 4
+}
+```
+This means:
+- 7 → index 2
+- 1 → index 3
+- etc.
+✅ Why is this useful?
+
+Because checking if a value exists becomes very fast, and getting its index is instant.
+
+Example:
+```python
+target = 7
+index_map[target]  # gives 2
+```
+Code Example:
+```python
+arr = [4, 2, 7, 1, 9]
+
+# Create a dictionary where each number points to its index
+index_map = {value: i for i, value in enumerate(arr)}
+
+target = 7
+
+# Check if the target exists as a key in the dictionary
+if target in index_map:
+    # Print its index value
+    print(f"Found at index {index_map[target]}")  
+else:
+    print("Not found")
+```
+| Operation                 | What it does             | Time  |
+|--------------------------|---------------------------|-------|
+| Create index_map         | Convert list → dict       | O(n)  |
+| Check target in index_map| See if number exists      | O(1)  |
+| index_map[target]        | Get index quickly         | O(1)  |
+
+---
