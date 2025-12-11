@@ -77,11 +77,12 @@ print(idx)  # 1 → first position where 2 appears
 Why useful?
 - Helps get the start index of a group of duplicates.
 - Useful for range queries, logs, or finding lower bounds.
-Time Complexity: O(log n)
+
+Time Complexity: `O(log n)`
 - Performs binary search to find the leftmost position.
 - No elements are moved → only searching.
 
-✅ 2. bisect_right(arr, x) — Find last position (rightmost)
+✅ 2. `bisect_right(arr, x)` — Find last position (rightmost)
 Use case: Count elements ≤ x
 
 If you want to know how many students scored ≤ 70, you can use bisect_right.
@@ -98,11 +99,12 @@ Why useful?
 - Efficient for prefix/count queries.
 - Finds the end boundary of duplicates.
 - Used in statistics or histogram-like tasks.
-Time Complexity: O(log n)
+
+Time Complexity: `O(log n)`
 - Same as bisect_left, but finds the rightmost position.
 - Again, only binary search → no shifting.
 
-✅ 3. insort(arr, x) — Insert while keeping list sorted
+✅ 3. `insort(arr, x)` — Insert while keeping list sorted
 Use case: Maintaining a sorted list dynamically
 
 Example: streaming live scores, always inserting new values in sorted order.
@@ -118,7 +120,8 @@ Why useful?
 - You don’t need to re-sort the list.
 - Ideal for real-time ranking, priority lists, or stock prices.
 - Inserts in O(n) while maintaining order.
-Time Complexity: O(n)
+
+Time Complexity: `O(n)`
 - Performs binary search (O(log n))
 - Then inserts the element, which shifts elements → O(n)
 - Total dominated by shifting → O(n)
