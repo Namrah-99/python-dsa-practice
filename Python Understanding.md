@@ -62,6 +62,7 @@ index = bisect.bisect_left(arr, 7)
 - Finds index = 3, where `7` is located.
 
 ✅ 1. `bisect_left(arr, x)` — Find first position (leftmost)
+
 Use case: Finding the first occurrence of a value or boundary
 
 Suppose you have sorted timestamps and you want to find the start of entries occurring at a specific time.
@@ -83,6 +84,7 @@ Time Complexity: `O(log n)`
 - No elements are moved → only searching.
 
 ✅ 2. `bisect_right(arr, x)` — Find last position (rightmost)
+
 Use case: Count elements ≤ x
 
 If you want to know how many students scored ≤ 70, you can use bisect_right.
@@ -105,6 +107,7 @@ Time Complexity: `O(log n)`
 - Again, only binary search → no shifting.
 
 ✅ 3. `insort(arr, x)` — Insert while keeping list sorted
+
 Use case: Maintaining a sorted list dynamically
 
 Example: streaming live scores, always inserting new values in sorted order.
