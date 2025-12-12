@@ -21,8 +21,6 @@ Selection Sort repeatedly selects the minimum element from the unsorted part and
 
 **🔹 Impact:** Work grows quadratically → O(n²) comparisons.
 
----
-
 ## 2. How many operations per element?
 
 For each pass:
@@ -37,8 +35,6 @@ For each pass:
 
 **🔹 Impact:** Comparisons dominate → O(n²), swaps fewer than Bubble Sort.
 
----
-
 ## 3. Best, Average, Worst Case Behavior
 
 - **Best case:** Already sorted → comparisons still happen → O(n²)  
@@ -47,8 +43,6 @@ For each pass:
 
 **🔹 Impact:** Time complexity does not depend on input order, unlike Bubble or Insertion Sort.
 
----
-
 ## 4. What data structure is used?
 
 - Works on arrays or lists  
@@ -56,8 +50,6 @@ For each pass:
 - Swaps elements in place  
 
 **🔹 Impact:** Space-efficient but does many comparisons.
-
----
 
 ## 5. Time Complexity
 
@@ -69,8 +61,6 @@ For each pass:
 
 **🔹 Impact:** No early-stop optimization like Bubble Sort.
 
----
-
 ## 6. Space Complexity
 
 - Uses only a few variables for loops and swapping  
@@ -79,8 +69,6 @@ For each pass:
 **Space = O(1)**  
 
 **🔹 Impact:** In-place sorting.
-
----
 
 ## 7. Loops Inside Loops?
 
@@ -93,15 +81,11 @@ for i in range(n):
 
 **🔹 Impact:** Nested loops → quadratic time → O(n²)
 
----
-
 ## 8. Any early stopping opportunities?
 
 No — every element is always compared to find the minimum.
 
 **🔹 Impact:** Cannot optimize by input order → O(n²) always.
-
----
 
 ## 9. Any redundant computation?
 
@@ -109,8 +93,6 @@ No — every element is always compared to find the minimum.
 - Swaps done only once per pass → slightly more efficient than Bubble Sort  
 
 **🔹 Impact:** Slightly fewer swaps than Bubble Sort.
-
----
 
 ## 10. Can we choose a better data structure or algorithm?
 
@@ -121,7 +103,37 @@ Yes:
 
 **🔹 Impact:** Selection Sort is mostly useful for small datasets or teaching.
 
----
+## Key Concepts, Operations, and Behavior
+
+| Operation              | Description                                           | Why Track It                                                      |
+|-----------------------|-------------------------------------------------------|-------------------------------------------------------------------|
+| **Comparison**        | Checking if `arr[j] < arr[min_index]`                 | Dominant cost; determines time complexity **O(n²)**               |
+| **Selection**         | Finding the smallest element in the unsorted portion  | Core idea of the algorithm; happens once per outer loop           |
+| **Swap**              | Swapping the found minimum with the first unsorted element | Only one swap per pass, but swaps can be expensive           |
+| **Pass**              | Full scan of the unsorted region                      | Shows progress as sorted region grows from the front              |
+| **No Early Termination** | Always scans entire remaining region              | Even on already-sorted arrays, all comparisons are performed      |
+
+### Tip for Dry Running
+Record the following during each pass:
+- Current `i`
+- Current `min_index`
+- Number of comparisons
+- Final swap made in the pass
+
+## Stability
+
+- **Selection Sort is not stable by default.**
+- Equal elements can change relative order because the algorithm swaps non-adjacent elements.
+- *Stable variants exist but require shifting instead of swapping.*
+
+## Characteristics & Behavior
+
+- Performs **O(n²)** comparisons for *all* input orders.
+- Uses only **n − 1 swaps**, making it more efficient than Bubble Sort when swaps are expensive.
+- Simple, predictable performance.
+- Suitable for:
+  - Small arrays  
+  - Systems where memory writes (swaps) are costly
 
 ## 🎯 Summary of Selection Sort Through the Checklist
 
@@ -140,7 +152,7 @@ Yes:
 
 ---
 
-# 🔵 Selection Sort in Python
+## 🔵 Selection Sort in Python
 
 ```python
 def selection_sort(arr):
@@ -163,7 +175,7 @@ arr = [64, 25, 12, 22, 11]
 print(selection_sort(arr))  # Output: [11, 12, 22, 25, 64]
 ```
 
-# 🔵 Time Complexity
+## 🔵 Time Complexity
 
 | Case         | Time Complexity | Explanation                          |
 |--------------|----------------|--------------------------------------|
@@ -171,15 +183,14 @@ print(selection_sort(arr))  # Output: [11, 12, 22, 25, 64]
 | Average Case | O(n²)           | Same as above                        |
 | Worst Case   | O(n²)           | Same as above                        |
 
----
 
-# 🔵 Space Complexity
+## 🔵 Space Complexity
 
 O(1) — In-place, uses only loop and swap variables
 
 ---
 
-# 🔵 Test Arrays for Different Cases
+## 🔵 Test Arrays for Different Cases
 
 ```python
 # 1. Best Case — Already sorted
@@ -203,3 +214,5 @@ arr6 = []
 # 7. Nearly sorted
 arr7 = [1, 2, 3, 5, 4]
 ```
+
+<img width="829" height="1205" alt="image" src="https://github.com/user-attachments/assets/db5c6004-f6a8-4fad-bad3-5107f6a7439e" />
