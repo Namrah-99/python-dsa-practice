@@ -1,5 +1,17 @@
 # ✅ Selection Sort — Step-by-Step Analysis Using the Checklist
 
+Selection Sort repeatedly selects the smallest element from the unsorted portion of the array and swaps it with the first unsorted element. This reduces the unsorted region one element at a time.
+
+**Pseudo-code:**
+```
+for i from 0 to n-1:
+    min_index = i
+    for j from i+1 to n-1:
+        if arr[j] < arr[min_index]:
+            min_index = j
+    swap(arr[i], arr[min_index])
+```
+
 ## 1. What is the input size (n)?
 
 Selection Sort repeatedly selects the minimum element from the unsorted part and places it at the beginning.
