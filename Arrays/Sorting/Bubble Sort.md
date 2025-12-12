@@ -1,6 +1,5 @@
 # ✅ Bubble Sort — Step-by-Step Analysis Using the Checklist
 
----
 
 ## 1. What is the input size (n)?
 
@@ -10,8 +9,6 @@ Bubble Sort compares neighboring elements repeatedly across the list.
 - If **n = 1,000** → may require **~1,000×999 ≈ 1M comparisons**
 
 **🔹 Impact:** Work increases quadratically as n grows → **O(n²)**.
-
----
 
 ## 2. How many operations per element?
 
@@ -27,7 +24,6 @@ Within each pass, Bubble Sort:
 
 **🔹 Impact:** Many operations → especially swaps → makes Bubble Sort slow.
 
----
 
 ## 3. Best, Average, Worst Case Behavior
 
@@ -47,8 +43,6 @@ Within each pass, Bubble Sort:
 
 **🔹 Impact:** Performs poorly except in best case with early-stop optimization.
 
----
-
 ## 4. What data structure is used?
 
 - Uses a simple **array/list**  
@@ -56,8 +50,6 @@ Within each pass, Bubble Sort:
 - Swaps elements **in-place**
 
 **🔹 Impact:** Works fine on arrays but still inefficient due to excessive swaps.
-
----
 
 ## 5. Time Complexity
 
@@ -68,8 +60,6 @@ Within each pass, Bubble Sort:
 | Worst  | **O(n²)**  | Full passes + max swaps                 |
 
 **🔹 Impact:** Poor performance for large inputs.
-
----
 
 ## 6. Space Complexity
 
@@ -83,8 +73,6 @@ So:
 
 **🔹 Impact:** Space-efficient but time-inefficient.
 
----
-
 ## 7. Loops Inside Loops?
 
 Yes — Bubble Sort has nested loops:
@@ -94,10 +82,8 @@ for i in range(n):
     for j in range(n - i - 1):
 ```
 
-## 🔹 Impact  
+** 🔹 Impact:**  
 Nested loops → quadratic time → **O(n²)**.
-
----
 
 ## 8. Any early stopping opportunities?
 
@@ -107,8 +93,6 @@ If a full pass has **0 swaps**, the array is already sorted.
 
 **🔹 Impact:**  
 Best-case becomes **O(n)** instead of **O(n²)** — huge improvement when data is nearly sorted.
-
----
 
 ## 9. Any redundant computation?
 
@@ -120,8 +104,6 @@ Yes — lots:
 **🔹 Impact:**  
 Inefficient due to unnecessary repeated work.
 
----
-
 ## 10. Can we choose a better data structure or algorithm?
 
 Absolutely:
@@ -132,8 +114,6 @@ Absolutely:
 
 **🔹 Impact:**  
 Bubble Sort is almost never used in real life except for teaching.
-
----
 
 ## 🎯 Summary of Bubble Sort Through the Checklist
 
@@ -150,7 +130,9 @@ Bubble Sort is almost never used in real life except for teaching.
 | Redundant work     | A lot                                     |
 | Better alternative | Yes: Merge Sort, Quick Sort, Heap Sort    |
 
-# 🔵 Bubble Sort in Python
+---
+
+## 🔵 Bubble Sort in Python
 
 ```python
 def bubble_sort(arr):
@@ -175,7 +157,7 @@ arr = [5, 1, 4, 2, 8]
 print(bubble_sort(arr))  # Output: [1, 2, 4, 5, 8]
 ```
 
-# 🔵 Time Complexity
+### Time Complexity
 
 | Case         | Time Complexity | Explanation                                      |
 |--------------|----------------|--------------------------------------------------|
@@ -183,16 +165,13 @@ print(bubble_sort(arr))  # Output: [1, 2, 4, 5, 8]
 | Worst Case   | **O(n²)**      | Reverse sorted → maximum comparisons + swaps     |
 | Average Case | **O(n²)**      | Many passes and many comparisons                 |
 
----
-
-# 🔵 Space Complexity
+### Space Complexity
 
 - **O(1)** — Bubble Sort is in-place, uses only a few variables  
 - No recursion, no extra arrays
 
----
 
-# 🔵 Test Arrays for Different Cases
+## 🔵 Test Arrays for Different Cases
 
 ```python
 # 1. Best Case — Already sorted
@@ -216,3 +195,114 @@ arr6 = []
 # 7. Nearly sorted (small number of swaps)
 arr7 = [1, 2, 3, 5, 4]
 ```
+
+---
+
+## 🔵 Optimized Bubble Sort
+
+Optimized Bubble Sort uses a **flag** to detect if the array is already sorted and stop early. Here’s a clean Python implementation along with time and space complexity analysis.
+
+## Python Code
+
+```python
+def optimized_bubble_sort(arr):
+    n = len(arr)
+    
+    for i in range(n):
+        swapped = False  # Flag to check if any swap happened in this pass
+        
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                # Swap if elements are in wrong order
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        
+        # If no swap happened, the array is already sorted
+        if not swapped:
+            break
+
+    return arr
+
+
+# Example usage
+arr = [64, 34, 25, 12, 22, 11, 90]
+sorted_arr = optimized_bubble_sort(arr)
+print("Sorted array:", sorted_arr)
+```
+
+### How it works
+
+1. Iterate over the array `n` times (outer loop).  
+2. Use an inner loop to compare adjacent elements and swap if needed.  
+3. Keep a `swapped` flag to detect if any swap occurred in the current pass.  
+4. If no swaps occur in a pass, the array is already sorted → break early.  
+
+### Time Complexity
+
+| Case         | Complexity | Reason                                                         |
+|--------------|------------|----------------------------------------------------------------|
+| Best case    | O(n)       | Array already sorted → only one pass needed, `swapped` is False |
+| Average case | O(n²)      | Typical scenario, multiple passes required                     |
+| Worst case   | O(n²)      | Array is in reverse order → all swaps required                |
+
+### Space Complexity
+
+- **O(1)** (constant) because it’s an in-place sort; no extra arrays are used.  
+
+✅ This is the most optimized version of Bubble Sort using a flag.
+
+---
+
+## 🔵 Cocktail/Optimized Bubble with Last Swap
+
+After each pass, the array elements beyond the last swapped index are already in place, so we don’t need to compare them again. This reduces unnecessary comparisons, especially for nearly sorted arrays.
+
+```python
+def optimized_bubble_last_swap(arr):
+    n = len(arr)
+    end = n - 1  # Last unsorted element index
+
+    while end > 0:
+        last_swap = 0  # Track the last swapped position
+
+        for i in range(end):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                last_swap = i  # Update last swap position
+
+        end = last_swap  # Reduce the comparison range to last swap
+
+        if last_swap == 0:
+            break  # Array is already sorted
+
+    return arr
+
+# Example usage
+arr = [64, 34, 25, 12, 22, 11, 90]
+sorted_arr = optimized_bubble_last_swap(arr)
+print("Sorted array:", sorted_arr)
+```
+
+## How it works
+
+1. Keep a pointer `end` to track the last unsorted element.  
+2. Iterate from the start to `end`, swapping adjacent elements if out of order.  
+3. Track the **last swap position** in the pass (`last_swap`).  
+4. Set `end = last_swap` for the next pass — elements beyond `last_swap` are already sorted.  
+5. Stop early if no swaps occur (`last_swap == 0`).  
+
+## Time Complexity
+
+| Case           | Complexity | Reason                                                                 |
+|----------------|------------|------------------------------------------------------------------------|
+| Best case      | O(n)       | Already sorted → only one pass needed                                   |
+| Nearly sorted  | O(n + k)   | `k` = number of elements out of place; fewer comparisons than O(n²)    |
+| Average case   | O(n²)      | Typical unsorted array                                                  |
+| Worst case     | O(n²)      | Array in reverse order → behaves like normal bubble sort               |
+
+## Space Complexity
+
+- **O(1)** (constant) → in-place sorting, no extra arrays used.  
+
+✅ This version is especially efficient for **nearly sorted arrays**, as it dynamically reduces the range of comparisons using the last swapped index.
