@@ -1,5 +1,18 @@
 # ✅ Insertion Sort — Step-by-Step Analysis Using the Checklist
 
+Insertion Sort builds a sorted portion of the array one element at a time. For each element, it inserts it into its correct position in the already-sorted part of the array by shifting larger elements one position to the right.
+
+**Pseudo-code:**
+```
+for i from 1 to n-1:
+    key = arr[i]
+    j = i - 1
+    while j >= 0 and arr[j] > key:
+        arr[j + 1] = arr[j]   # Shift element to the right
+        j = j - 1
+    arr[j + 1] = key          # Insert key into correct position
+```
+
 ## 1. What is the input size (n)?
 
 Insertion Sort builds a sorted portion of the array one element at a time.
@@ -9,8 +22,6 @@ Insertion Sort builds a sorted portion of the array one element at a time.
 
 🔹 **Impact:** Time grows quadratically → O(n²) in worst case.  
 But very efficient for small or nearly sorted arrays.
-
----
 
 ## 2. How many operations per element?
 
@@ -28,8 +39,6 @@ For each element:
 
 🔹 **Impact:** More shifts than Selection Sort if array is reversed.
 
----
-
 ## 3. Best, Average, Worst Case Behavior
 
 - **Best case:** Array already sorted → 1 comparison per element → O(n)  
@@ -38,8 +47,6 @@ For each element:
 
 🔹 **Impact:** Performs very well on nearly sorted arrays, unlike Bubble or Selection Sort.
 
----
-
 ## 4. What data structure is used?
 
 - Works on arrays or lists  
@@ -47,8 +54,6 @@ For each element:
 - In-place sorting  
 
 🔹 **Impact:** Space-efficient, but shifting can be costly for large arrays.
-
----
 
 ## 5. Time Complexity
 
@@ -60,8 +65,6 @@ For each element:
 
 🔹 **Impact:** Best-case can be optimized, unlike Selection Sort.
 
----
-
 ## 6. Space Complexity
 
 - Uses only a few variables for loops and key insertion  
@@ -69,8 +72,6 @@ For each element:
 - **Space = O(1)**  
 
 🔹 **Impact:** Very memory-efficient.
-
----
 
 ## 7. Loops Inside Loops?
 
@@ -85,16 +86,12 @@ for i in range(1, n):
 🔹 **Impact:** Nested loops → worst-case quadratic time → O(n²)  
 Best-case single inner loop iteration → O(n)
 
----
-
 ## 8. Any early stopping opportunities?
 
 Yes — inner loop stops when `arr[j] <= key`
 
 🔹 **Impact:** Best-case O(n) if array is already sorted  
 Inner loop rarely runs → efficient for nearly sorted arrays
-
----
 
 ## 9. Any redundant computation?
 
@@ -103,8 +100,6 @@ Shifts are unavoidable for unsorted portions
 
 🔹 **Impact:** More efficient than Bubble Sort in partially sorted arrays.
 
----
-
 ## 10. Can we choose a better data structure or algorithm?
 
 - Binary Insertion Sort → uses binary search to find insert position → fewer comparisons  
@@ -112,7 +107,43 @@ Shifts are unavoidable for unsorted portions
 
 🔹 **Impact:** Insertion Sort is excellent for small or nearly sorted datasets, not for large random arrays.
 
----
+## Key Steps and Operations to Track
+
+When analyzing or dry-running **Insertion Sort**, focus on these actions:
+
+| Operation           | Description                                             | Why Track It                                                     |
+|--------------------|---------------------------------------------------------|------------------------------------------------------------------|
+| **Comparison**      | Checking if `arr[j] > key`                              | Dominant cost; determines worst-case time complexity **O(n²)**   |
+| **Shift/Move**      | Moving elements one position to the right to make space | Expensive in memory writes; tracks data movement                |
+| **Insertion**       | Placing the key into its correct position               | Core of the algorithm; happens once per element                 |
+| **Pass**            | Processing one element and inserting it into sorted portion | Shows incremental growth of sorted region                       |
+| **Early Termination** | When `arr[j] <= key`, inner loop breaks             | Optimizes best-case scenario (already sorted array)             |
+
+### Tip for Dry Running
+Keep a table with:
+- Current `i`
+- Current `key`
+- Current position `j`
+- Number of comparisons and shifts
+- Final placement of `key`
+
+## Stability
+
+- **Insertion Sort is stable by default.**  
+- Equal elements retain their original relative order since the algorithm only shifts larger elements, never swaps non-adjacent elements.
+
+## Characteristics & Behavior
+
+- **Best Case (already sorted):** O(n) comparisons, O(1) shifts  
+- **Worst Case (reverse sorted):** O(n²) comparisons and shifts  
+- Performs fewer writes than Bubble Sort (good for memory-constrained systems)  
+- Simple, adaptive, and stable  
+- Works well for small arrays or nearly sorted data  
+
+## Optimizations
+
+- **Binary Insertion Sort:** Use binary search to find the insertion position, reducing comparisons to O(log n) per insertion (shifts remain O(n))  
+- **Early termination:** Stop inner loop when the correct position is found, which is already part of the standard algorithm
 
 ## 🎯 Summary of Insertion Sort Through the Checklist
 
@@ -155,8 +186,6 @@ arr = [12, 11, 13, 5, 6]
 print(insertion_sort(arr))  # Output: [5, 6, 11, 12, 13]
 ```
 
----
-
 ## 🔵 Time Complexity
 
 | Case        | Time Complexity | Explanation                          |
@@ -165,38 +194,9 @@ print(insertion_sort(arr))  # Output: [5, 6, 11, 12, 13]
 | Average Case | O(n²)        | Many comparisons + shifts             |
 | Worst Case | O(n²)           | Reverse sorted → maximum shifts      |
 
----
-
 ## 🔵 Space Complexity
 
 O(1) — In-place sorting, uses only loop variables and key
-
----
-
-## 🔵 Test Arrays for Different Cases
-
-```python
-# 1. Best Case — Already sorted
-arr1 = [1, 2, 3, 4, 5]
-
-# 2. Worst Case — Reverse sorted
-arr2 = [5, 4, 3, 2, 1]
-
-# 3. Average Case — Random order
-arr3 = [3, 1, 4, 5, 2]
-
-# 4. Array with duplicates
-arr4 = [4, 2, 4, 1, 3]
-
-# 5. All elements same
-arr5 = [7, 7, 7, 7, 7]
-
-# 6. Empty Array — Edge case
-arr6 = []
-
-# 7. Nearly sorted
-arr7 = [1, 2, 3, 5, 4]
-```
 
 ---
 
@@ -263,12 +263,37 @@ print(sorted_arr)  # Output: [5, 6, 11, 12, 13]
 | Average Case | O(n²)          | Shifts still require O(n²) in total           |
 | Worst Case   | O(n²)          | Maximum shifts for reverse sorted array       |
 
----
-
 ## 🔵 Space Complexity
 
 O(1) — In-place sorting, only uses a few variables.
 
+**Note:** Binary Insertion Sort reduces the number of comparisons using binary search but does **not** reduce the number of shifts, so the overall worst-case time remains O(n²).
+
 ---
 
-**Note:** Binary Insertion Sort reduces the number of comparisons using binary search but does **not** reduce the number of shifts, so the overall worst-case time remains O(n²).
+## 🔵 Test Arrays for Different Cases
+
+```python
+# 1. Best Case — Already sorted
+arr1 = [1, 2, 3, 4, 5]
+
+# 2. Worst Case — Reverse sorted
+arr2 = [5, 4, 3, 2, 1]
+
+# 3. Average Case — Random order
+arr3 = [3, 1, 4, 5, 2]
+
+# 4. Array with duplicates
+arr4 = [4, 2, 4, 1, 3]
+
+# 5. All elements same
+arr5 = [7, 7, 7, 7, 7]
+
+# 6. Empty Array — Edge case
+arr6 = []
+
+# 7. Nearly sorted
+arr7 = [1, 2, 3, 5, 4]
+```
+
+<img width="836" height="1194" alt="image" src="https://github.com/user-attachments/assets/61af32f2-ad7e-46ad-9c16-e66fe2bad0fa" />
