@@ -1,5 +1,14 @@
 # ✅ Bubble Sort — Step-by-Step Analysis Using the Checklist
 
+Bubble Sort repeatedly steps through the array, compares adjacent elements, and swaps them if they are in the wrong order. This "bubbles" the largest element to the end in each pass.
+
+Pseudo-code:
+```
+for i from 0 to n-1:
+    for j from 0 to n-2-i:
+        if arr[j] > arr[j+1]:
+            swap(arr[j], arr[j+1])
+```
 
 ## 1. What is the input size (n)?
 
@@ -115,6 +124,32 @@ Absolutely:
 **🔹 Impact:**  
 Bubble Sort is almost never used in real life except for teaching.
 
+## Key Steps and Operations to Track
+
+When analyzing or dry-running **Bubble Sort**, pay attention to these actions:
+
+| **Operation**       | **Description**                                                     | **Why Track It**                                                |
+|---------------------|---------------------------------------------------------------------|------------------------------------------------------------------|
+| **Comparison**      | `arr[j] > arr[j+1]` check                                           | Core of algorithm’s efficiency; counts for time complexity      |
+| **Swap**            | Exchanging two elements                                             | Expensive operation; affects performance                         |
+| **Shift/Move**      | Sometimes we consider swap as 3 shifts (`temp=arr[j]; arr[j]=arr[j+1]; arr[j+1]=temp`) | Useful for systems where memory writes are costly               |
+| **Pass**            | One iteration of outer loop                                         | Helps see progress toward sorted array                           |
+| **Early Termination** | Flag to detect if array is already sorted                         | Optimizes best-case scenario                                     |
+
+**Tip:** When dry running, keep a table with passes, comparisons, swaps. This makes mental tracking much easier.
+
+## Stability
+
+Bubble Sort is **stable**: equal elements retain their relative order after sorting.
+
+## Optimizations
+
+- **Early termination:**  
+  If no swaps occur in a pass, the algorithm stops early (reduces best-case to **O(n)**).
+
+- **Reduce inner loop size:**  
+  Track the *last swapped position* to limit the next pass to only the unsorted portion → slightly faster in practice.
+
 ## 🎯 Summary of Bubble Sort Through the Checklist
 
 | Checklist Item     | Impact in Bubble Sort                    |
@@ -169,32 +204,6 @@ print(bubble_sort(arr))  # Output: [1, 2, 4, 5, 8]
 
 - **O(1)** — Bubble Sort is in-place, uses only a few variables  
 - No recursion, no extra arrays
-
-
-## 🔵 Test Arrays for Different Cases
-
-```python
-# 1. Best Case — Already sorted
-arr1 = [1, 2, 3, 4, 5]
-
-# 2. Worst Case — Reverse sorted
-arr2 = [5, 4, 3, 2, 1]
-
-# 3. Average Case — Random order
-arr3 = [3, 1, 4, 5, 2]
-
-# 4. Array with duplicates
-arr4 = [4, 2, 4, 1, 3]
-
-# 5. All elements same
-arr5 = [7, 7, 7, 7, 7]
-
-# 6. Empty Array — Edge case
-arr6 = []
-
-# 7. Nearly sorted (small number of swaps)
-arr7 = [1, 2, 3, 5, 4]
-```
 
 ---
 
@@ -306,3 +315,31 @@ print("Sorted array:", sorted_arr)
 - **O(1)** (constant) → in-place sorting, no extra arrays used.  
 
 ✅ This version is especially efficient for **nearly sorted arrays**, as it dynamically reduces the range of comparisons using the last swapped index.
+
+## 🔵 Test Arrays for Different Cases
+
+```python
+# 1. Best Case — Already sorted
+arr1 = [1, 2, 3, 4, 5]
+
+# 2. Worst Case — Reverse sorted
+arr2 = [5, 4, 3, 2, 1]
+
+# 3. Average Case — Random order
+arr3 = [3, 1, 4, 5, 2]
+
+# 4. Array with duplicates
+arr4 = [4, 2, 4, 1, 3]
+
+# 5. All elements same
+arr5 = [7, 7, 7, 7, 7]
+
+# 6. Empty Array — Edge case
+arr6 = []
+
+# 7. Nearly sorted (small number of swaps)
+arr7 = [1, 2, 3, 5, 4]
+```
+
+<img width="919" height="1087" alt="image" src="https://github.com/user-attachments/assets/37903819-14a2-4615-b097-16980590c756" />
+
