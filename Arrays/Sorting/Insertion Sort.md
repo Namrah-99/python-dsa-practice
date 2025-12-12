@@ -197,3 +197,78 @@ arr6 = []
 # 7. Nearly sorted
 arr7 = [1, 2, 3, 5, 4]
 ```
+
+---
+
+## Insertion Sort
+
+- Inserts each element into the correct position in the sorted portion by **linear search**.  
+- Compares elements one by one until the correct spot is found.  
+- **Time complexity:** O(n²) in average/worst case.
+
+
+## Binary Insertion Sort
+
+- Uses **binary search** to find the correct insertion position.  
+- Reduces the number of comparisons to O(log n) per insertion.  
+- Still requires shifting elements, so overall time complexity remains O(n²) for shifts.
+
+
+## Summary
+
+- Binary Insertion Sort reduces comparisons but **does not reduce the number of shifts** compared to standard Insertion Sort.
+
+---
+
+## 🔵 Binary Insertion Sort in Python
+```python
+def binary_search(arr, val, start, end):
+    """
+    Helper function to find the index to insert `val` using binary search.
+    """
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] < val:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return start
+
+def binary_insertion_sort(arr):
+    """
+    Performs Binary Insertion Sort on the given array.
+    Sorts the array in-place and returns the sorted array.
+    """
+    for i in range(1, len(arr)):
+        key = arr[i]
+        # Find index where key should be inserted
+        insert_index = binary_search(arr, key, 0, i - 1)
+        # Shift elements to the right to make space for key
+        for j in range(i, insert_index, -1):
+            arr[j] = arr[j - 1]
+        arr[insert_index] = key
+    return arr
+
+# Example usage
+arr = [12, 11, 13, 5, 6]
+sorted_arr = binary_insertion_sort(arr)
+print(sorted_arr)  # Output: [5, 6, 11, 12, 13]
+```
+
+## 🔵 Time Complexity
+
+| Case         | Time Complexity | Explanation                                   |
+|--------------|----------------|-----------------------------------------------|
+| Best Case    | O(n log n)     | Binary search reduces comparisons per insertion |
+| Average Case | O(n²)          | Shifts still require O(n²) in total           |
+| Worst Case   | O(n²)          | Maximum shifts for reverse sorted array       |
+
+---
+
+## 🔵 Space Complexity
+
+O(1) — In-place sorting, only uses a few variables.
+
+---
+
+**Note:** Binary Insertion Sort reduces the number of comparisons using binary search but does **not** reduce the number of shifts, so the overall worst-case time remains O(n²).
