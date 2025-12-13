@@ -91,8 +91,7 @@ for i in range(n):
     for j in range(n - i - 1):
 ```
 
-** 🔹 Impact:**  
-Nested loops → quadratic time → **O(n²)**.
+**🔹 Impact:** Nested loops → quadratic time → **O(n²)**.
 
 ## 8. Any early stopping opportunities?
 
@@ -100,8 +99,7 @@ Yes — use a flag to stop if no swaps occur:
 
 If a full pass has **0 swaps**, the array is already sorted.
 
-**🔹 Impact:**  
-Best-case becomes **O(n)** instead of **O(n²)** — huge improvement when data is nearly sorted.
+**🔹 Impact:** Best-case becomes **O(n)** instead of **O(n²)** — huge improvement when data is nearly sorted.
 
 ## 9. Any redundant computation?
 
@@ -110,8 +108,7 @@ Yes — lots:
 - Repeatedly comparing items already known to be in correct position  
 - Re-scanning most of the array every pass  
 
-**🔹 Impact:**  
-Inefficient due to unnecessary repeated work.
+**🔹 Impact:** Inefficient due to unnecessary repeated work.
 
 ## 10. Can we choose a better data structure or algorithm?
 
@@ -121,8 +118,7 @@ Absolutely:
 - **Merge Sort / Quick Sort** → **O(n log n)**  
 - **Heap Sort** → good worst-case guarantees  
 
-**🔹 Impact:**  
-Bubble Sort is almost never used in real life except for teaching.
+**🔹 Impact:** Bubble Sort is almost never used in real life except for teaching.
 
 ## Key Steps and Operations to Track
 
