@@ -310,3 +310,11 @@ This is the correct mental model interviewers expect.
 - ✅ Iterative Merge Sort dry run
 
 - ✅ Why Merge Sort is stable (proof)
+
+## Detailed Example with all steps
+<p align="center"><img width="504" height="620" alt="image" src="https://github.com/user-attachments/assets/ee4ff27a-7655-44d2-8fab-5abcd108b554" />
+</p>
+<p align="center"><img width="517" height="685" alt="image" src="https://github.com/user-attachments/assets/2485b548-34fe-4c1a-8501-d7a4ac20afa3" />
+</p>
+<p align="center"><img width="612" height="578" alt="image" src="https://github.com/user-attachments/assets/d67a5c3f-0004-4e0f-b980-913aa22e5495" />
+</p>
