@@ -272,3 +272,27 @@ arr7 = [6, 5, 4, 3, 2, 1]
 </p>
 <p align="center"><img width="794" height="590" alt="image" src="https://github.com/user-attachments/assets/f319fccb-58eb-4e91-9d94-e558e86e175d" />
 </p>
+
+## Proper, complete, interview-grade mental dry run of Quick Sort (recursive, Lomuto partition)
+
+✔ Index tracking (low, high, i, j, pi)
+
+✔ Clear recursive split boundaries
+
+✔ Every comparison and swap
+
+✔ Array state after every meaningful step
+
+✔ One-page, but no logic skipped
+<p align="center"><img width="642" height="758" alt="image" src="https://github.com/user-attachments/assets/58b38e8e-edb7-4039-a704-2684a1e36811" />
+</p>
+<p align="center"><img width="645" height="706" alt="image" src="https://github.com/user-attachments/assets/81972d29-cde6-4fa4-aba6-db3fc6c1550e" />
+</p>
+<p align="center"><img width="639" height="671" alt="image" src="https://github.com/user-attachments/assets/08c99ae9-e36a-4cff-b294-a55ad1177912" />
+</p>
+<p align="center"><img width="642" height="637" alt="image" src="https://github.com/user-attachments/assets/db12f01b-6a9f-407e-af03-512bb33e2409" />
+</p>
+<p align="center"><img width="644" height="547" alt="image" src="https://github.com/user-attachments/assets/a3b670b8-6c8e-43fc-a04b-ce4f28639315" />
+</p>
+<p align="center"><img width="641" height="709" alt="image" src="https://github.com/user-attachments/assets/adee0932-4320-4fd6-8f15-07abd7847077" />
+</p>
