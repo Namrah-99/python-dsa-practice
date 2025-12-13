@@ -5,7 +5,7 @@ Bubble Sort repeatedly steps through the array, compares adjacent elements, and 
 Pseudo-code:
 ```
 for i from 0 to n-1:
-    for j from 0 to n-2-i:
+    for j from 0 to n-i-1:
         if arr[j] > arr[j+1]:
             swap(arr[j], arr[j+1])
 ```
