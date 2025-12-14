@@ -104,6 +104,11 @@ Counting Sort does **not** degrade based on input order.
 
 🔹 **Impact:** Not in-place.
 
+<p align="center"><img width="793" height="507" alt="image" src="https://github.com/user-attachments/assets/770a2e6b-b5a6-4e54-90ef-aceaff0c6b1a" />
+</p>
+<p align="center"><img width="791" height="581" alt="image" src="https://github.com/user-attachments/assets/852f08f3-67c8-4e28-8aed-062b64a2a9bb" />
+</p>
+
 ## 7️⃣ Loops Inside Loops?
 
 ❌ No nested loops.
