@@ -14,8 +14,6 @@ Instead of sorting by swapping or comparing:
 - Compute cumulative positions  
 - Place elements directly into the output array  
 
----
-
 ## 🧠 Pseudo-Code (Stable Counting Sort)
 
 ```text
@@ -38,6 +36,8 @@ countingSort(arr, n):
     copy output to arr
 ```
 
+---
+
 ## 1️⃣ What is the input size (n)?
 
 - **n** = number of elements in the array  
@@ -49,8 +49,6 @@ countingSort(arr, n):
 - `n = 10`, values in range `0–10⁶` → inefficient  
 
 🔹 **Impact:** Performance depends on **O(n + k)**, not just **n**.
-
----
 
 ## 2️⃣ How many operations per element?
 
@@ -68,8 +66,6 @@ countingSort(arr, n):
 
 🔹 **Impact:** Total operations ≈ **O(n + k)**
 
----
-
 ## 3️⃣ Best, Average, Worst Case Behavior
 
 | Case    | Time Complexity | Explanation     |
@@ -81,8 +77,6 @@ countingSort(arr, n):
 🔹 **Key Insight:**  
 Counting Sort does **not** degrade based on input order.
 
----
-
 ## 4️⃣ What data structures are used?
 
 - Input array  
@@ -90,8 +84,6 @@ Counting Sort does **not** degrade based on input order.
 - Output array of size `n`  
 
 🔹 **Impact:** Requires extra memory.
-
----
 
 ## 5️⃣ Time Complexity
 
@@ -101,8 +93,6 @@ Counting Sort does **not** degrade based on input order.
 | Prefix sum      | O(k) |
 | Build output    | O(n) |
 | **Total**       | **O(n + k)** |
-
----
 
 ## 6️⃣ Space Complexity
 
@@ -114,8 +104,6 @@ Counting Sort does **not** degrade based on input order.
 
 🔹 **Impact:** Not in-place.
 
----
-
 ## 7️⃣ Loops Inside Loops?
 
 ❌ No nested loops.
@@ -126,23 +114,17 @@ Counting Sort does **not** degrade based on input order.
 
 🔹 **Impact:** Linear performance.
 
----
-
 ## 8️⃣ Any early stopping opportunities?
 
 ❌ No early exit.
 
 - Must process full array and count range.
 
----
-
 ## 9️⃣ Any redundant computation?
 
 ❌ Minimal redundancy.
 
 - Each element processed exactly twice.
-
----
 
 ## 🔟 Can we choose a better algorithm?
 
@@ -164,15 +146,11 @@ Counting Sort does **not** degrade based on input order.
 | Reverse traversal| Ensures stability                |
 | Output placement | Final sorted order               |
 
----
-
 ## 🔒 Stability
 
 ✅ Counting Sort is **STABLE** (when traversed from right to left).
 
 - Equal elements retain original order.
-
----
 
 ## ⚙️ Characteristics & Behavior
 
@@ -181,8 +159,6 @@ Counting Sort does **not** degrade based on input order.
 - Stable  
 - Not in-place  
 - Very fast for integers  
-
----
 
 ## 🚀 Optimizations
 
@@ -218,6 +194,21 @@ def counting_sort(arr):
 
     return output
 ```
+**Breakdown of last loop**
+<p align="center"><img width="796" height="621" alt="image" src="https://github.com/user-attachments/assets/02b4fa1b-bbb1-4f59-8e2f-9ed42e77f180" />
+</p>
+<p align="center"><img width="784" height="726" alt="image" src="https://github.com/user-attachments/assets/9c8d0bce-5819-4730-a345-5360736e8582" />
+</p>
+
+**General rule to remember**
+```python
+range(start, stop, step)
+```
+
+- Includes start
+- Excludes stop
+- Adds step each time
+
 
 ## 🔵 Time Complexity Summary
 
@@ -226,8 +217,6 @@ def counting_sort(arr):
 | Best    | O(n + k)  |
 | Average | O(n + k)  |
 | Worst   | O(n + k)  |
-
----
 
 ## 🔵 Space Complexity Summary
 
@@ -276,3 +265,15 @@ arr7 = []
 - Value range is very large  
 - Floating-point values are involved  
 - Memory-constrained systems
+
+## Mental Dry Run
+<p align="center"><img width="792" height="587" alt="image" src="https://github.com/user-attachments/assets/bba6f72e-0e39-4248-bc1f-896429095fe3" />
+</p>
+<p align="center"><img width="791" height="409" alt="image" src="https://github.com/user-attachments/assets/fbe47aaf-ccff-4c56-b390-54962740aca2" />
+</p>
+<p align="center"><img width="787" height="470" alt="image" src="https://github.com/user-attachments/assets/8a1ec749-1849-4d82-9133-da87762cec35" />
+</p>
+<p align="center"><img width="794" height="575" alt="image" src="https://github.com/user-attachments/assets/2c02bf10-662e-446e-96b8-3e443bfddfab" />
+</p>
+<p align="center"><img width="794" height="311" alt="image" src="https://github.com/user-attachments/assets/a9cd8ad7-3148-4006-9511-13d72185fd08" />
+</p>
