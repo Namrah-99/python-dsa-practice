@@ -128,6 +128,11 @@ bucketSort(arr):
 | Output array| O(n) if separate|
 | **Total**   | O(n + m)       |
 
+<p align="center"><img width="803" height="426" alt="image" src="https://github.com/user-attachments/assets/ba31b75b-198e-4f59-9dc7-d1d07176875b" />
+</p>
+<p align="center"><img width="802" height="322" alt="image" src="https://github.com/user-attachments/assets/7373f02a-2eeb-4862-9b88-eed4eb33a2fd" />
+</p>
+
 ## 7️⃣ Loops Inside Loops?
 
 ✔ Sorting inside each bucket can introduce nested loops (Insertion Sort → O(b²) per bucket)  
