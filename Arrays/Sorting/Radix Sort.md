@@ -1,5 +1,9 @@
 # ✅ **Radix Sort — Step-by-Step Analysis Using the Checklist**
 
+Repeated stable sorting by each digit from right to left until the largest number runs out of digits.
+
+Sorts numbers digit by digit (LSD → MSD), using stable counting sort at each digit.
+
 Radix Sort is a **non-comparison based sorting algorithm** that sorts numbers **digit by digit**, starting from the **least significant digit (LSD)** or the **most significant digit (MSD)**.
 
 Radix Sort does **not** sort directly.  
@@ -26,12 +30,12 @@ Instead, it uses a **stable sub-sorting algorithm** (usually **Counting Sort**) 
 
 ```text
 radixSort(arr):
-    maxVal = max(arr)
-    exp = 1
+    maxVal = max(arr)                # Find how many digits the largest number has → that tells us how many sorting passes we need
+    exp = 1                                                        # exp = 10^k where k can be 0,1,2.... if 10^0 = 1, if 10^1 = 10
 
-    while maxVal / exp > 0:
+    while maxVal / exp > 0:                    # Loop through each digit place (Move digit by digit)  ones → tens → hundreds → ...
         countingSortByDigit(arr, exp)
-        exp = exp * 10
+        exp = exp * 10                                 # Move to the next higher digit (tens → hundreds → …)
 ```
 
 ```text
@@ -39,20 +43,30 @@ countingSortByDigit(arr, exp):
     output[n]
     count[0..9] = 0
 
-    for i = 0 to n-1:
-        digit = (arr[i] / exp) % 10
-        count[digit]++
+    for i = 0 to n-1:                                  # Count digit occurrences -> how many -> Group numbers by the current digit (0–9)
+        digit = (arr[i] / exp) % 10                    # extract digit at place (based on exp)
+        count[digit]++                        
 
-    for i = 1 to 9:
-        count[i] += count[i - 1]
+    for i = 1 to 9:                                    # Prefix Sum -> up to where -> converts counts into final index boundaries
+        count[i] += count[i - 1]                       # Convert counts to positions (prefix sum) -> turns frequencies into positions
 
-    for i = n-1 down to 0:
-        digit = (arr[i] / exp) % 10
-        output[count[digit] - 1] = arr[i]
-        count[digit]--
+    for i = n-1 down to 0:                             # Placement
+        digit = (arr[i] / exp) % 10                    # extract digit drom arr[i] at place (based on exp)
+        output[count[digit] - 1] = arr[i]              # count[digit] = next free position for that digit (from the right)
+        count[digit]--                                 # Each placement: -Uses that position -Moves it left
 
-    copy output to arr
+    copy output to arr                                 # Update array with the sorted result for this digit
 ```
+
+
+<p align="center"><img width="715" height="795" alt="image" src="https://github.com/user-attachments/assets/5f5c2eb9-1655-48d7-abf5-e1c00dd7dfc2" />
+</p>
+<p align="center"><img width="716" height="649" alt="image" src="https://github.com/user-attachments/assets/591ff234-2f02-4461-9582-5714294f1c09" />
+</p>
+<p align="center"><img width="717" height="678" alt="image" src="https://github.com/user-attachments/assets/80a8d4fc-b8cf-4370-b26b-f5e48edf7f2b" />
+</p>
+<p align="center"><img width="711" height="467" alt="image" src="https://github.com/user-attachments/assets/9ebf6c04-d80d-4448-923e-65e6d3c7af11" />
+</p>
 
 ---
 
@@ -155,6 +169,16 @@ while maxVal / exp > 0
 | Floating points      | Quick / Merge Sort  |
 | Very large digits    | Comparison sort     |
 
+## Simple Analogy
+
+Imagine exam roll numbers:
+
+- Count = how many students got each grade
+
+- Prefix sum = last seat number for each grade
+
+- Placement = seat students from right to left
+
 ---
 
 ## 🔑 Key Steps to Track While Dry Running
@@ -233,6 +257,8 @@ def radix_sort(arr):
 | Average | O(n × d)    |
 | Worst   | O(n × d)    |
 
+`O(d * (n + k))`, where d = digits, k = range (0–9)
+
 ## 🔵 Space Complexity Summary
 
 | Component    | Space   |
@@ -284,6 +310,42 @@ arr8 = []
 - Very large digit counts  
 - Memory-restricted systems  
 
-## 📌 Final One-Line Summary (Very Exam-Friendly)
-
 **Radix Sort sorts elements digit-by-digit using a stable sub-sort (Counting Sort), achieving O(n × d) time complexity without comparisons.**
+
+# Mental Dry Run
+
+<p align="center"><img width="800" height="559" alt="image" src="https://github.com/user-attachments/assets/ca87bc25-86f5-400a-b198-3e090b8a254a" />
+</p>
+<p align="center"><img width="726" height="742" alt="image" src="https://github.com/user-attachments/assets/0dcb08c7-2549-4897-9266-c64eaf29b053" />
+</p>
+<p align="center"><img width="732" height="792" alt="image" src="https://github.com/user-attachments/assets/02686be9-692f-412b-a37b-6454c5bf8039" />
+</p>
+<p align="center"><img width="755" height="582" alt="image" src="https://github.com/user-attachments/assets/3bad2525-b875-4ad3-a864-b9090b336fc4" />
+</p>
+<p align="center"><img width="723" height="666" alt="image" src="https://github.com/user-attachments/assets/a15a7b03-a9c2-49f5-8e4f-4c16500c1c59" />
+</p>
+<p align="center"><img width="733" height="742" alt="image" src="https://github.com/user-attachments/assets/0d458d12-be01-458b-884b-e3654c634c2c" />
+</p>
+
+## KEY TAKEAWAYS (MEMORY GOLD)
+
+- count = frequency
+
+- prefix sum = index boundary
+
+- right-to-left placement = stability (keeps duplicates in order)
+
+- each pass fixes one digit
+
+- last digit pass completes sorting
+
+---
+
+# Interview-ready explanation
+
+<p align="center"><img width="733" height="696" alt="image" src="https://github.com/user-attachments/assets/84c962ef-29ec-427e-b11f-eee18f3be43c" />
+</p>
+<p align="center"><img width="745" height="568" alt="image" src="https://github.com/user-attachments/assets/1cbac165-5c8e-484a-ad73-43daaa96f962" />
+</p>
+<p align="center"><img width="717" height="392" alt="image" src="https://github.com/user-attachments/assets/839dfa37-64d4-4b8c-9325-079aa01ca806" />
+</p>
