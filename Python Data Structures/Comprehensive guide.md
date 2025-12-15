@@ -2,7 +2,7 @@
 
 Learning Data Structures and Algorithms (DSA) in Python requires understanding both Python’s built-in structures and more advanced or abstract data structures. This guide will help you focus on what you need before starting LeetCode or any competitive coding practice.
 
-# 1. Built-in Python Data Structures
+# 🔵 1. Built-in Python Data Structures
 
 Python comes with a variety of built-in data structures. These are essential for everyday programming and are often enough for many algorithmic problems.
 
@@ -63,7 +63,7 @@ s = "hello"
 
 ---
 
-# 2. Specialized Built-in Collections (`collections` module)
+# 🔵 2. Specialized Built-in Collections (`collections` module)
 
 Python’s `collections` module provides optimized data structures for specific use cases.
 
@@ -107,7 +107,7 @@ p = Point(1, 2)
 
 ---
 
-# 3. Arrays
+# 🔵 3. Arrays
 
 - Module: array
 
@@ -119,7 +119,7 @@ arr = array('i', [1, 2, 3])
 
 ---
 
-# 4. Advanced / Abstract Data Structures
+# 🔵 4. Advanced / Abstract Data Structures
 
 These are not built into Python but are essential for DSA understanding and competitive programming.
 
