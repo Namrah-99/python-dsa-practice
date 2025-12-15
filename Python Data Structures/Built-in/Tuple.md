@@ -84,3 +84,22 @@
 </p>
 <p align="center"><img width="722" height="678" alt="image" src="https://github.com/user-attachments/assets/607aa612-1e22-44f2-ac54-18dc8790d843" />
 </p>
+
+## Tuple-Heavy LeetCode Patterns
+
+<p align="center"><img width="719" height="522" alt="image" src="https://github.com/user-attachments/assets/a977f5d0-a40b-4b26-ba86-2765ffafaca1" />
+</p>
+
+### Use tuples when you want **safety + performance**:
+
+- Keys
+
+- Coordinates
+
+- States
+
+- Heap elements
+
+If something must not change, use a tuple.
+
+**Lists are for change. Tuples are for meaning.**
