@@ -77,3 +77,10 @@
 </p>
 
 **Use tuples for fixed, read-only, hashable data — avoid them when data must change, grow, or be frequently updated.**
+
+## Tuple Techniques You Should Know
+
+<p align="center"><img width="725" height="692" alt="image" src="https://github.com/user-attachments/assets/7f14a830-3d81-4467-a4d9-22300ca07dac" />
+</p>
+<p align="center"><img width="722" height="678" alt="image" src="https://github.com/user-attachments/assets/607aa612-1e22-44f2-ac54-18dc8790d843" />
+</p>
