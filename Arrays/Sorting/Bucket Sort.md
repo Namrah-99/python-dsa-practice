@@ -219,6 +219,11 @@ def bucket_sort(arr):
         sorted_arr.extend(sorted(bucket))  # Insertion Sort can be used here
 
     return sorted_arr
+
+arr = [45, 12, 58, 37, 63, 25, 41, 75, 94]
+print("Original array:", arr)
+sorted_arr = bucket_sort(arr)
+print("Sorted array:", sorted_arr)
 ```
 
 ## 🔵 Time Complexity Summary
