@@ -135,6 +135,8 @@ Let:
 
 🔹 **k = 10** → constant.
 
+<p align="center"><img width="740" height="792" alt="image" src="https://github.com/user-attachments/assets/1cd2730d-49a8-4323-a17a-a01f09ee0684" /> </p>
+
 ## 7️⃣ Loops Inside Loops?
 
 ✔ **Yes (controlled).**
