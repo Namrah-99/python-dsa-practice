@@ -5,6 +5,17 @@
 
 <p align="center"><img width="721" height="296" alt="image" src="https://github.com/user-attachments/assets/d8e9e48a-25f3-448a-ab62-b18c80530daf" /></p>
 
+---
+
+## Sets (Hash-based or stores hashable items only)
+
+click the image down below
+<p align="center"><img width="402" height="2231" alt="shape_YLdmq5MeaEouEw5MMA8k9 at 25-12-16 02 25 14" src="https://github.com/user-attachments/assets/44de6710-db61-4f18-90ff-3308665d4610" />
+</p>
+
+---
+
+## Properties
 <p align="center"><img width="707" height="369" alt="image" src="https://github.com/user-attachments/assets/5a220e18-0054-4e0c-bb81-be4539d78875" />
 </p>
 <p align="center"><img width="726" height="679" alt="image" src="https://github.com/user-attachments/assets/81d5c2e3-4376-4e5a-b927-dcc273555d14" />
