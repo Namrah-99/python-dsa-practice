@@ -9,8 +9,51 @@
 
 ## Sets (Hash-based or stores hashable items only)
 
-click the image down below
-<p align="center"><img width="402" height="2231" alt="shape_YLdmq5MeaEouEw5MMA8k9 at 25-12-16 02 25 14" src="https://github.com/user-attachments/assets/44de6710-db61-4f18-90ff-3308665d4610" />
+<p align="center"><img width="791" height="381" alt="image" src="https://github.com/user-attachments/assets/92b9308c-6667-4735-a1d8-adadf7214464" />
+</p>
+<p align="center"><img width="793" height="413" alt="image" src="https://github.com/user-attachments/assets/ec571217-204d-49e3-8ce7-7f72f18e289f" />
+</p>
+<p align="center"><img width="790" height="512" alt="image" src="https://github.com/user-attachments/assets/2a71282f-afa9-4e20-a098-a8d3bda572bb" />
+</p>
+<p align="center"><img width="798" height="725" alt="image" src="https://github.com/user-attachments/assets/1c44983b-94c5-4048-81fa-a65a1467c288" />
+</p>
+<p align="center"><img width="793" height="584" alt="image" src="https://github.com/user-attachments/assets/40621a1e-a729-404f-aefb-be6844f23f8b" />
+</p>
+<p align="center"><img width="793" height="427" alt="image" src="https://github.com/user-attachments/assets/e220835f-7715-424f-b684-2cddfcf5ca05" />
+</p>
+<p align="center"><img width="794" height="441" alt="image" src="https://github.com/user-attachments/assets/2b199139-bf7e-4b3c-9397-6fda7da3a9cb" />
+</p>
+<p align="center"><img width="794" height="586" alt="image" src="https://github.com/user-attachments/assets/ba194c31-960d-4ddc-91af-95f54b8dce1b" />
+</p>
+<p align="center"><img width="787" height="503" alt="image" src="https://github.com/user-attachments/assets/5b30e7db-d377-42dd-b46a-443b93b8400c" />
+</p>
+
+## Hashing
+
+<p align="center"><img width="791" height="735" alt="image" src="https://github.com/user-attachments/assets/ad35f216-e45e-47cb-b861-294ee77e8fcb" />
+</p>
+<p align="center"><img width="808" height="638" alt="image" src="https://github.com/user-attachments/assets/46e757d2-c0ce-427a-9fad-254e61b713b8" />
+</p>
+<p align="center"><img width="810" height="722" alt="image" src="https://github.com/user-attachments/assets/18f34b65-856d-4d14-9016-bb3cdbbf0b22" />
+</p>
+<p align="center"><img width="795" height="516" alt="image" src="https://github.com/user-attachments/assets/eae55fc5-8de2-4cf0-8033-d17948fbb73e" />
+</p>
+<p align="center"><img width="788" height="590" alt="image" src="https://github.com/user-attachments/assets/eeb87fa1-6b3c-46e2-8fc6-44bd8034f0aa" />
+</p>
+<p align="center"><img width="795" height="583" alt="image" src="https://github.com/user-attachments/assets/3c9959ef-8f69-4be6-820b-7ccf99e39181" />
+</p>
+<p align="center"><img width="802" height="656" alt="image" src="https://github.com/user-attachments/assets/d5c892a0-c600-4d94-9649-dfdb465d6346" />
+</p>
+<p align="center"><img width="803" height="482" alt="image" src="https://github.com/user-attachments/assets/9a6580e8-f444-4ad1-aa02-7250991b16d7" />
+</p>
+
+## How a Hash Is Calculated (Simple)
+
+<p align="center"><img width="792" height="491" alt="image" src="https://github.com/user-attachments/assets/cd4851ca-a129-419a-8385-4e99f73a8f4c" />
+</p>
+<p align="center"><img width="785" height="620" alt="image" src="https://github.com/user-attachments/assets/f64f1e7d-af29-427b-88af-24f479a3897e" />
+</p>
+<p align="center"><img width="799" height="361" alt="image" src="https://github.com/user-attachments/assets/d7dd5d9a-71a4-490e-868c-ca4d5b858a10" />
 </p>
 
 ---
