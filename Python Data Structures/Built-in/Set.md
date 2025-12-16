@@ -119,6 +119,13 @@ Sets are extremely useful for:
 <p align="center"><img width="719" height="529" alt="image" src="https://github.com/user-attachments/assets/5c64d933-ba6c-4fff-9006-a50b41f492ef" />
 </p>
 
+<p align="center"><img width="801" height="787" alt="image" src="https://github.com/user-attachments/assets/f6b30c35-25a1-4446-9fb0-95c74d542f61" />
+</p>
+<p align="center"><img width="793" height="595" alt="image" src="https://github.com/user-attachments/assets/0c220a00-3fb1-4d54-ae4f-fec58fb0b5c9" />
+</p>
+<p align="center"><img width="802" height="626" alt="image" src="https://github.com/user-attachments/assets/52fcdf17-b390-40d0-9754-72ea5b9591d5" />
+</p>
+
 ---
 
 ## ✅ When to Use set
