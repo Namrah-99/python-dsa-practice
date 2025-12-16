@@ -93,6 +93,16 @@
 <p align="center"><img width="714" height="364" alt="image" src="https://github.com/user-attachments/assets/283727d0-1b28-442a-afbb-7b9511449255" />
 </p>
 
+**Thread safety** means that a data structure or piece of code can be used by multiple threads at the same time without causing incorrect behavior or data corruption.
+
+What “Lists are not thread-safe” means
+
+- Python lists do not use locks internally
+
+- Concurrent operations (append, pop, insert) can interfere with each other
+
+- You must manually protect them using locks if used across threads
+
 **Use a list when you need an ordered, mutable, indexable collection with fast append — avoid it when performance depends on search, front operations, or numeric efficiency.**
 
 <p align="center"><img width="712" height="249" alt="image" src="https://github.com/user-attachments/assets/cd79e714-5c09-4af3-9c58-061b69917a73" />
