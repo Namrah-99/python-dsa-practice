@@ -4,7 +4,7 @@
 
 The `collections` module exists to provide **specialized data structures** that solve common programming problems more efficiently and more clearly than basic Python data types.
 
-<p align="center"><img width="1655" height="834" alt="bbc" src="https://github.com/user-attachments/assets/9fd7824f-4e17-4c67-81dd-b6116a09c506" />
+<p align="center"><img width="1446" height="877" alt="bbc" src="https://github.com/user-attachments/assets/7eaf504e-0970-4245-a1e8-f015b84fb4be" />
 </p>
 
 ### Key Reasons
@@ -17,11 +17,15 @@ The `collections` module exists to provide **specialized data structures** that 
   - queues
   - ordered data
 
-<p align="center"><img width="1645" height="1079" alt="Specialized use-cases" src="https://github.com/user-attachments/assets/c4746e63-c1a9-403d-b052-0fd1ea4427f9" /></p>
+<p align="center"><img width="1748" height="1006" alt="Extends built-in data structures" src="https://github.com/user-attachments/assets/8763a7fe-325a-4119-84b1-a069f9b8a51d" />
+</p>
 
 #### 2. Reduces repetitive and error-prone code
 - Many common patterns (frequency counting, default values, queues) require repeated logic when using basic data structures.
 - `collections` removes this boilerplate and minimizes bugs.
+
+<p align="center"><img width="1919" height="1080" alt="Reduces boilerplate and errors" src="https://github.com/user-attachments/assets/fdc7565c-758c-4010-a09f-8b5d0ee8c5da" />
+</p>
 
 #### 3. Improves code readability and intent
 - Using `Counter`, `deque`, or `defaultdict` makes your intention clear at a glance.
@@ -40,6 +44,8 @@ The `collections` module exists to provide **specialized data structures** that 
 ## 🔵 Why You Need to Learn `collections` for LeetCode
 
 LeetCode problems are heavily focused on **data structure selection and efficiency**, not just syntax.
+
+<p align="center"><img width="1645" height="1079" alt="Specialized use-cases" src="https://github.com/user-attachments/assets/c4746e63-c1a9-403d-b052-0fd1ea4427f9" /></p>
 
 ---
 
@@ -77,6 +83,9 @@ LeetCode problems are heavily focused on **data structure selection and efficien
 - With the right container, many problems become:
   - straightforward pattern applications
   - rather than complex logic puzzles
+
+<p align="center"><img width="1918" height="1080" alt="Specialized Use-Cases in collections" src="https://github.com/user-attachments/assets/6b43ab7c-0443-47c6-b5d2-2a7bb5b85262" />
+</p>
 
 ---
 
