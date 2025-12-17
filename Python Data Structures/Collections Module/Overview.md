@@ -4,9 +4,8 @@
 
 The `collections` module exists to provide **specialized data structures** that solve common programming problems more efficiently and more clearly than basic Python data types.
 
-<p align="center"><img width="1665" height="886" alt="bb" src="https://github.com/user-attachments/assets/80ee0676-82e0-41ba-b267-cace18e215ac" /></p>
-
----
+<p align="center"><img width="1655" height="834" alt="bbc" src="https://github.com/user-attachments/assets/9fd7824f-4e17-4c67-81dd-b6116a09c506" />
+</p>
 
 ### Key Reasons
 
@@ -17,6 +16,8 @@ The `collections` module exists to provide **specialized data structures** that 
   - grouping
   - queues
   - ordered data
+
+<p align="center"><img width="1645" height="1079" alt="Specialized use-cases" src="https://github.com/user-attachments/assets/c4746e63-c1a9-403d-b052-0fd1ea4427f9" /></p>
 
 #### 2. Reduces repetitive and error-prone code
 - Many common patterns (frequency counting, default values, queues) require repeated logic when using basic data structures.
