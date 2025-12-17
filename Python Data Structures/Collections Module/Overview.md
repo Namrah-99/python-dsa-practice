@@ -4,6 +4,8 @@
 
 The `collections` module exists to provide **specialized data structures** that solve common programming problems more efficiently and more clearly than basic Python data types.
 
+<p align="center"><img width="1665" height="886" alt="bb" src="https://github.com/user-attachments/assets/80ee0676-82e0-41ba-b267-cace18e215ac" /></p>
+
 ---
 
 ### Key Reasons
