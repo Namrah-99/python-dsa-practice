@@ -65,6 +65,9 @@ c = Counter()
 print(c["missing"])  # 0
 ```
 
+<p align="center"><img width="1920" height="1079" alt="cOUNTER pROPERTIES" src="https://github.com/user-attachments/assets/7656e90a-04ba-4bc3-b9bd-3314da860438" />
+</p>
+
 ## 3️⃣ Syntax & Initialization
 
 ### 🔹 Basic Creation
