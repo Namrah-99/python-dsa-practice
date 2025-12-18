@@ -204,7 +204,9 @@ def isAnagram(s, t):
 ### 🔹 Example 2: Top K Frequent Elements
 ```python
 def topKFrequent(nums, k):
-    return [x for x, _ in Counter(nums).most_common(k)]
+    return [x for x, _ in Counter(nums).most_common(k)]    # List comprehension -> Extracts only the elements, ignores the counts
+                                                           # Counter(nums).most_common(k) returns [(1, 3), (2, 2)] → [1, 2]
+                                                           # _ is used because the frequency value is not needed
 ```
 
 📌 Uses heap internally → efficient
@@ -220,6 +222,9 @@ for right in range(len(s)):
         count[s[left]] -= 1
         left += 1
 ```
+
+<p align="center"><img width="1664" height="679" alt="image" src="https://github.com/user-attachments/assets/58d96c7b-846a-4755-965f-c14b99be9c72" />
+</p>
 
 ### 🔹 Example 4: Multiset Difference
 ```python
