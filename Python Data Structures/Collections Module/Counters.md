@@ -38,9 +38,11 @@ freq = Counter(nums)
 - Sliding window  
 - Hashing problems
 
-<p align="center"><img width="1920" height="1079" alt="examples for counter collection 1" src="https://github.com/user-attachments/assets/e7cc048b-8855-4171-bdb1-1ce15eb8b987" />
+<p align="center"><img width="1853" height="1030" alt="examples for counter collection 0" src="https://github.com/user-attachments/assets/d3b582e5-eb50-40ec-aaca-aff5f423b6a6" />
 </p>
 <p align="center"><img width="1920" height="1078" alt="examples for counter collection 2" src="https://github.com/user-attachments/assets/589fba05-e1e2-4e77-b5d4-0d3efab94421" />
+</p>
+<p align="center"><img width="1664" height="679" alt="image" src="https://github.com/user-attachments/assets/58d96c7b-846a-4755-965f-c14b99be9c72" />
 </p>
 
 ## 2️⃣ Properties
