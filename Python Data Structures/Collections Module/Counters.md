@@ -165,6 +165,9 @@ c.elements()       # Iterator repeating elements
 
 📌 Sometimes a plain `dict` is faster for simple cases.
 
+<p align="center"><img width="1920" height="1079" alt="When to use and when not to use" src="https://github.com/user-attachments/assets/41d60ff3-420a-4455-88ad-3c076ec89cca" />
+</p>
+
 ## 7️⃣ Common Pitfalls ⚠️
 
 ### ❌ Negative Counts
