@@ -38,6 +38,9 @@ d[key].append(val)
 
 ✅ Cleaner  ✅ Safer  ✅ Faster to write  
 
+<p align="center"><img width="1920" height="1080" alt="defaultDict" src="https://github.com/user-attachments/assets/bdc3fd7f-478a-4310-93ec-5315204fb692" /></p>
+<p align="center"><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/01ed4281-0c09-4e55-9e8c-279a5e8635b1" /></p>
+
 ## 2️⃣ Properties
 
 | Property                     | Value |
@@ -48,6 +51,8 @@ d[key].append(val)
 | Allows duplicate values     | ✅ |
 | Supports indexing           | ❌ |
 | Auto-creates missing keys   | ✅ |
+
+<p align="center"><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ca325109-9482-4a89-9e0a-6b5cd0d39946" /></p>
 
 ## 3️⃣ Syntax & Initialization
 
@@ -179,6 +184,8 @@ freq = defaultdict(int)
 
 for n in nums:
     freq[n] += 1
+
+print(freq) # {1: 3, 2: 2, 3: 1}
 ```
 ### 🔹 Example 2: Group Anagrams
 ```python
@@ -190,6 +197,7 @@ for word in words:
     groups[key].append(word)
 
 result = list(groups.values())
+print(result) # [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
 ```
 ### 🔹 Example 3: Graph Adjacency List
 ```python
@@ -198,6 +206,15 @@ graph = defaultdict(list)
 
 for u, v in edges:
     graph[u].append(v)
+
+print(graph) 
+```
+Output ( `graph` )
+```text
+{
+   1: [2, 3],          # Node 1 connects to 2 and 3
+   2: [4]              # Node 2 connects to 4
+}
 ```
 ### 🔹 Example 4: Nested Dictionary Pattern
 ```python
@@ -205,6 +222,17 @@ scores = defaultdict(dict)
 
 scores['Alice']['Math'] = 90
 scores['Alice']['Science'] = 95
+
+print(scores)
+```
+Output ( `scores` )
+```text
+{
+  'Alice': {
+    'Math': 90,
+    'Science': 95
+  }
+}
 ```
 ### 🔹 Example 5: Sliding Window Counting
 ```python
@@ -212,6 +240,8 @@ window = defaultdict(int)
 
 for ch in "aababc":
     window[ch] += 1
+
+print(window) # {'a': 3, 'b': 2, 'c': 1}
 ```
 
 ### 🔑 Key Takeaways
