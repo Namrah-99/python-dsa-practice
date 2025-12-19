@@ -214,6 +214,7 @@ for i in range(5):
     od[i] = i * i
 
 od.popitem(last=False)  # removes first inserted item
+print(od)               # OrderedDict({1: 1, 2: 4, 3: 9, 4: 16})
 ```
 
 ### 🔹 Example 3: Order-Sensitive Comparison
@@ -238,7 +239,7 @@ for num in [1, 2, 3, 1, 2]:
     else:
         od[num] = 1
 
-print(list(od.keys()))
+print(list(od.keys()))   #  [3, 1, 2]
 ```
 
 ## 🔑 Key Takeaways
