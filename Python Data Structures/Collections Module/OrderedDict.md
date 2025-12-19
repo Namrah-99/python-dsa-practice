@@ -21,19 +21,12 @@
 
 <p align="center"><img width="1500" height="1059" alt="image" src="https://github.com/user-attachments/assets/dc629f2c-7727-4086-b68a-2b29c0c582e2" />
 </p>
-<p align="center"><img width="1590" height="973" alt="image" src="https://github.com/user-attachments/assets/f14ab982-07ab-489f-8761-8787addefe23" />
+<p align="center"><img width="1557" height="1009" alt="image" src="https://github.com/user-attachments/assets/98b6b7d5-8d8f-459f-ba6f-f4588a764c61" />
 </p>
-<p align="center"><img width="1461" height="902" alt="image" src="https://github.com/user-attachments/assets/19af01ac-e590-4751-b337-da25ab32fd0e" />
+<p align="center"><img width="1832" height="1076" alt="image" src="https://github.com/user-attachments/assets/c0219d40-5457-47b4-be4a-2d50571f9d09" />
 </p>
-<p align="center"><img width="1293" height="1078" alt="image" src="https://github.com/user-attachments/assets/105f17f2-60f2-45f2-ba4f-fde95a80f293" />
+<p align="center"><img width="1380" height="1078" alt="image" src="https://github.com/user-attachments/assets/05052f5f-2498-478f-b28d-2b279f20e364" />
 </p>
-<p align="center"></p>
-<p align="center"></p>
-<p align="center"></p>
-<p align="center"></p>
-<p align="center"></p>
-<p align="center"></p>
-
 
 ### Why not just `dict`?
 
@@ -46,14 +39,17 @@
 
 ## 2️⃣ Properties
 
-| Property | Value |
-|--------|------|
-| Ordered | ✅ Insertion order preserved |
-| Mutable | ✅ |
-| Allows duplicate keys | ❌ |
-| Allows duplicate values | ✅ |
-| Indexing by position | ❌ |
-| Iteration order predictable | ✅ |
+| Property | Value | Key Takeaway |
+|--------|------|---------------------------------|
+| Ordered | ✅ Insertion order preserved | Keeps insertion order           |
+| Mutable | ✅ | Can change after creation       |
+| Allows duplicate keys | ❌ | Overwrites value                |
+| Allows duplicate values | ✅ | Multiple keys can share values  |
+| Indexing by position | ❌ | Use `list()` conversion         |
+| Iteration order predictable | ✅ | Always same order               |
+
+<p align="center"><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/75477779-5219-47ed-a55a-4bca3ddd891c" />
+</p>
 
 ## 3️⃣ Syntax & Initialization
 
@@ -154,6 +150,11 @@ for key in od:
 - No reordering is needed  
 - Memory efficiency is critical  
 - Simpler data structures solve the problem
+
+<p align="center"></p>
+<p align="center"></p>
+<p align="center"></p>
+<p align="center"></p>
 
 ## 7️⃣ Common Pitfalls
 
