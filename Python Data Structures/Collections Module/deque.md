@@ -42,6 +42,8 @@ It outperforms lists when working with **queues, stacks, sliding windows, and BF
 | Supports indexing         | ✅ (but slower than list) |
 | Thread-safe appends/pops  | ✅    |
 
+<p align="center"><img width="1917" height="1027" alt="image" src="https://github.com/user-attachments/assets/2ca52c88-6a33-49e4-99ad-30a1ce9181ae" /></p>
+
 ## 3️⃣ Syntax & Initialization
 
 ### Import
@@ -169,12 +171,16 @@ queue.append(1)
 queue.append(2)
 queue.popleft()
 ```
+Resulting queue: deque([2])
+
 ### 🔹 Example 2: Stack Implementation
 ```python
 stack = deque()
 stack.append(10)
 stack.pop()
 ```
+Resulting stack: deque([])
+
 ### 🔹 Example 3: BFS (LeetCode Pattern)
 ```python
 from collections import deque
@@ -190,6 +196,13 @@ def bfs(graph, start):
         visited.add(node)
         q.extend(graph[node])
 ```
+
+Output:
+❌ No output is produced
+❌ No value is returned
+
+This function only updates internal variables (`visited`, `q`) and ends.
+
 ### 🔹 Example 4: Sliding Window Maximum (Monotonic Queue)
 ```python
 from collections import deque
@@ -203,6 +216,11 @@ for i, num in enumerate(nums):
     if dq[0] <= i - k:
         dq.popleft()
 ```
+Output:
+- ❌ No output is produced
+- Depends on `nums` and `k`, which are not defined
+- This code only updates `dq` internally
+
 ### 🔹 Example 5: Fixed-Size Window
 ```python
 dq = deque(maxlen=3)
@@ -211,6 +229,16 @@ for i in range(6):
     dq.append(i)
     print(list(dq))
 ```
+Printed Output:
+```csharp
+[0]
+[0, 1]
+[0, 1, 2]
+[1, 2, 3]
+[2, 3, 4]
+[3, 4, 5]
+```
+
 ## 🔑 Key Takeaways
 - `deque` = optimized list for both ends
 - Core for queues, BFS, sliding windows
