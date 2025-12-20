@@ -20,6 +20,9 @@ It outperforms lists when working with **queues, stacks, sliding windows, and BF
 - BFS / level-order traversal
 - Monotonic queue
 
+<p align="center"><img width="1918" height="1031" alt="image" src="https://github.com/user-attachments/assets/a609ab83-0180-4a2e-8134-5f5faea44bc4" /></p>
+<p align="center"><img width="1919" height="842" alt="image" src="https://github.com/user-attachments/assets/7a520abf-38f4-4055-8f83-53b2506e2837" /></p>
+
 ### Why not `list`?
 
 | Operation     | `list` | `deque` |
